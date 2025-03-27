@@ -24,6 +24,7 @@ public class App {
        myBasket.addProduct(salt);
 
 
+
        myBasket.printBasketCondition();
 
        System.out.println(myBasket.containsProduct("Сахар"));
