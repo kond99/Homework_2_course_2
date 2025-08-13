@@ -4,8 +4,11 @@ public class Product {
     private String productName;
     private int productCost;
 
-    public Product(){
-            }
+
+    public Product(String productName, int productCost) {
+        this.productName = productName;
+        this.productCost = productCost;
+    }
 
     @Override
     public String toString() {
@@ -13,11 +16,6 @@ public class Product {
                 "productName='" + productName + '\'' +
                 ", productCost=" + productCost +
                 '}';
-    }
-
-    public Product(String productName, int productCost) {
-        this.productName = productName;
-        this.productCost = productCost;
     }
 
     public String getProductName() {

@@ -2,14 +2,12 @@ package org.skypro.skyshop.basket;
 
 import org.skypro.skyshop.product.Product;
 
-import java.util.ArrayList;
-
 public class ProductBasket {
 
     private int occupiedPlaces = 0; // количество занятых ячеек
     private Product[] products = new Product[5];
 
-    public int getOccupiedPlaces() {
+    public int getOccupiedPlaces() {                // геттер для переменной
         return occupiedPlaces;
     }
 
@@ -22,16 +20,12 @@ public class ProductBasket {
         }
     }
 
-    public Product[] getProducts() {
-        return products;
-    }
 
     public int getBasketTotalCost() {
         int basketTotalCost = 0;
         for (int i = 0; i < products.length; i++) {
             if (products[i] != null) {
-                Product product = products[i];
-                int cost = product.getProductCost();
+                int cost = products[i].getProductCost();
                 basketTotalCost = basketTotalCost + cost;
             }
 
@@ -39,13 +33,12 @@ public class ProductBasket {
         return basketTotalCost;
     }
 
-    public void printBasketCondition() {
+    public void printBasket() {
         for (int i = 0; i < products.length; i++) {
             if (products[i] != null) {
                 Product product = products[i];
-                System.out.printf("<%s>:<%d>", product.getProductName(), product.getProductCost());
+                System.out.printf("<%s>:<%d>%n", product.getProductName(), product.getProductCost());
             }
-            System.out.println();
 
         }
         System.out.printf("Итого: <%d>", getBasketTotalCost());

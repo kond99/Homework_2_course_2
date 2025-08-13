@@ -3,8 +3,6 @@ package org.skypro.skyshop;
 import org.skypro.skyshop.basket.ProductBasket;
 import org.skypro.skyshop.product.Product;
 
-import java.util.Arrays;
-
 public class App {
     public static void main(String[] args) {
        Product broad = new Product("Хлеб", 45);
@@ -25,14 +23,14 @@ public class App {
 
 
 
-       myBasket.printBasketCondition();
+       myBasket.printBasket();
 
        System.out.println(myBasket.containsProduct("Сахар"));
 
        System.out.println(myBasket.containsProduct("кетчуп"));
 
        myBasket.clearBasket();
-       myBasket.printBasketCondition();
+       myBasket.printBasket();
        System.out.println(myBasket.containsProduct("Хлеб"));
 
     }
